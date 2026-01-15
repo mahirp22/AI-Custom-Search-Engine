@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exa Search</title>
+
+    <!-- Link to static stylesheet (Flask handles correct pathing) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+    <div class="page">
+        
+        <!-- Search container shell -->
+        <div class="search-shell">
+
+            <!-- Search input + submit button -->
+            <form id="search-form" class="search-bar">
+
+                <!-- User query input field -->
+                <input
+                    id="query-input"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Search here..."
+                />
+
+                <!-- Submit button triggers search -->
+                <button type="submit" class="arrow-btn" aria-label="Search">
+                    <span class="arrow">➤</span>
+                </button>
+
+            </form>
+
+            <!-- Status + feedback chip (shows: searching, no results, etc.) -->
+            <div class="chip" id="chip">
+                <span id="chip-text">waiting for a question…</span>
+            </div>
+
+        </div>
+
+        <!-- Container for rendered results -->
+        <div class="results" id="results"></div>
+    </div>
+
+    <!-- Attach client-side script -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
