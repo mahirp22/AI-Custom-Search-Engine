@@ -94,6 +94,6 @@ This demo shows:
 - AI-powered search results returned from Exa
 - Dynamic rendering of results in the UI
 
-<p align="center"> <img src="assets/exasearchdemo.gif" width="1000"> </p> 
+<p align="center"> <img src="assests/exasearchdemo.gif" width="1000"> </p> 
 
 
